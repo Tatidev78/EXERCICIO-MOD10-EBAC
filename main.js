@@ -54,9 +54,11 @@ $(document).ready(function(){
     submitHandler: function (form) {
             alert("Sua requisição foi enviada para análise, parabéns pela aquisição!");
             form.reset();
+            return false;
     },
 
     invalidHandler: function (event, validator) {
             alert("Por favor, preencha os campos para prosseguir com a compra!");
     }
+});
 });
