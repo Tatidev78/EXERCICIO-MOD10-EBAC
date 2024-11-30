@@ -3,9 +3,6 @@ $(document).ready(function(){
     $('#cpf').mask('000.000.000-00');
     $('#cep').mask('00000-000');
 
-    $('#telefone, #cpf, #cep').on('input', function () { 
-        this.value = this.value.replace(/\D/g, ''); 
-    });
 
     $('form').validate({
         rules: {
@@ -47,7 +44,7 @@ $(document).ready(function(){
             required: "Por favor, insira seu CEP."
         },
         cpf:{
-            required:"'Por favor, insira seu CPF."
+            required:"Por favor, insira seu CPF."
         }
      },
 
@@ -60,5 +57,7 @@ $(document).ready(function(){
     invalidHandler: function (event, validator) {
             alert("Por favor, preencha os campos para prosseguir com a compra!");
     }
+    
+
 });
 });
